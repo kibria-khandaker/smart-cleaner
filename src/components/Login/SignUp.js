@@ -5,10 +5,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../Loading/Loading';
 import { auth } from './../../firebase.init';
 import './Login_Signup.css';
+import SocialLogin from './SocialLogin';
 
 const SignUp = () => {
     const [agree, setAgree] = useState(false)
 
+    let errorElement;
     const [
         createUserWithEmailAndPassword,
         user,
@@ -28,6 +30,9 @@ const SignUp = () => {
         return <Loading></Loading>
     }
 
+    if (error) {
+        errorElement = <p className=' text-danger'>Error: {error?.message} </p>
+    }
     const handleRegister = async (event) => {
         event.preventDefault();
 
@@ -35,16 +40,26 @@ const SignUp = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
 
-        await createUserWithEmailAndPassword(email, password);
-        await updateProfile({ displayName: name });
-        navigate('/home');
+        if (agree) {
+            await createUserWithEmailAndPassword(email, password);
+            await updateProfile({ displayName: name });
+            navigate('/home');
+
+            // if (user == false) {
+            //     return (alert('your email already used')+ navigate('/home') )
+            // }else{
+            //     navigate('/home');
+            // }
+
+        }
     }
 
     return (
         <div className='container'>
             <div className="row">
-                <div className="col-md-6 mx-auto py-5 mb-5">
+                <div className="col-md-6 mx-auto pt-5">
                     <h2 className='my-4'> Please Sign Up </h2>
+                    {errorElement}
                     <Form onSubmit={handleRegister}>
 
                         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -60,21 +75,25 @@ const SignUp = () => {
                         </Form.Group>
 
                         <Form.Group className="mb-3 d-flex" controlId="formBasicCheckbox">
-                            <Form.Check  onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
+                            <Form.Check onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
                             <FormLabel className={`ps-2 ${agree ? 'text-info' : 'text-danger'}`} htmlFor="terms">
                                 Agree With Terms and Conditions
                             </FormLabel>
                         </Form.Group>
 
-                        <Button disabled={!agree} variant="info" className=' text-white' type="submit">
+                        <Button disabled={error ? (agree) : (!agree)} variant="info" className=' text-white' type="submit">
                             Sign Up
                         </Button>
 
                     </Form>
                     <div className=''>
-                        <p className='m-0 mt-4'> Forget Password? <button className=' border-0 rounded text-info text-decoration-none'> Reset Password </button>  </p>
-                        <p className='m-0 mt-1'> Already Have an account? <Link  onClick={navigateLogin} to='/login' className=' text-info text-decoration-none'> Please Login </Link>  </p>
+                        <p className='m-0 mt-1'> Already Have an account? <Link onClick={navigateLogin} to='/login' className=' text-info text-decoration-none'> Please Login </Link>  </p>
                     </div>
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-md-6 mx-auto py-4">
+                    <SocialLogin></SocialLogin>
                 </div>
             </div>
         </div>

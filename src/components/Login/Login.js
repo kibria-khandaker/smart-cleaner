@@ -6,6 +6,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { auth } from '../../firebase.init';
 import Loading from '../Loading/Loading';
+import SocialLogin from './SocialLogin';
 
 const Login = () => {
 
@@ -66,7 +67,7 @@ const Login = () => {
     return (
         <div className='container'>
             <div className="row">
-                <div className="col-md-6 mx-auto py-5 mb-5">
+                <div className="col-md-6 mx-auto pt-5 ">
                     <h2 className='my-4'> Please Login </h2>
 
                     <Form onSubmit={handleSubmit}>
@@ -92,6 +93,11 @@ const Login = () => {
                     </div>.
 
                     <ToastContainer />
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-md-6 mx-auto pb-4">
+                    <SocialLogin></SocialLogin>
                 </div>
             </div>
         </div>
