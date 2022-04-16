@@ -1,0 +1,9 @@
+.banner_section {
+    background-image: url('./../../img/pages-bg.jpg');
+    height: 500px;
+    display: flex;
+    background-position: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,39 +1,33 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from "react-router-dom";
+import logo from '../../Smart-Cleaner.png';
+import CustomLink from '../CustomLink/CustomLink';
+
 
 const Header = () => {
     return (
-        <div>
-            {/* <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="/login">Login</Link> */}
-            <Navbar collapseOnSelect expand="lg" sticky='top' bg="primary" variant="dark">
+        <>
+            <Navbar collapseOnSelect expand="lg" sticky='top' bg="light" variant="info">
                 <Container>
                     <Navbar.Brand as={Link} to="/">
-                        He
+                        <img height={40} src={logo} alt="" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <p className='m-0 text-white'>Lorem ipsum dolor sit amet.</p>
+                            <p className='m-0 '>I'm a smart cleaner. able to gift a clean life.</p>
                         </Nav>
                         <Nav>
-                            <Nav.Link as={Link} to="/about">About</Nav.Link>
-                            <Nav.Link as={Link} to="/login"> Login </Nav.Link>
-                            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                            </NavDropdown>
+                            <Nav.Link as={CustomLink} to="/">Home</Nav.Link>
+                            <Nav.Link as={CustomLink} to="/about">About</Nav.Link>
+                            <Nav.Link as={CustomLink} to="/blog"> Blog </Nav.Link>
+                            <Nav.Link as={CustomLink} to="/login"> Login </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </div>
+        </>
     );
 };
 
