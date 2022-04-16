@@ -56,9 +56,9 @@ const Login = () => {
         const email = emailRef.current.value;
         if (email) {
             await sendPasswordResetEmail(email);
-            toast('Sent email');
+            toast('Check your Email');
         } else {
-            toast('Enter your email');
+            toast('Enter Your email');
         }
     }
 
@@ -70,7 +70,7 @@ const Login = () => {
                     <h2 className='my-4'> Please Login </h2>
 
                     <Form onSubmit={handleSubmit}>
-                        
+
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
                         </Form.Group>
@@ -86,6 +86,7 @@ const Login = () => {
                     </Form>
 
                     <div className=''>
+                        {errorElement}
                         <p className='m-0 mt-4'> Forget Password? <button onClick={resetPassword} className=' border-0 rounded text-primary text-decoration-none'> Reset Password </button>  </p>
                         <p className='m-0 mt-1'> Are you new in Smart Cleaner? <Link onClick={navigateRegister} to='/signup' className=' text-primary text-decoration-none'> Please SignUp </Link>  </p>
                     </div>.
