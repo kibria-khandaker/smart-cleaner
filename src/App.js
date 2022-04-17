@@ -21,11 +21,14 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blogs />} />
+        
+        {/*------ protect router ---------  */}
         <Route path="/checkout/:serviceId" element={
           <RequireAuth>
             <CheckoutService />
           </RequireAuth>
         } />
+
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         

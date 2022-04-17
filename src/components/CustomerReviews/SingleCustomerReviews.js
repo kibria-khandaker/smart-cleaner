@@ -1,9 +1,10 @@
 import React from 'react';
-import Rating from 'react-rating';
 import { ImStarFull } from "react-icons/im";
+import Rating from 'react-rating';
 
 const SingleCustomerReviews = ({ customerReview }) => {
     const { img, name, rate, desc } = customerReview;
+
     return (
         <div className="col">
             <div className=" d-flex align-items-start ">

@@ -15,7 +15,7 @@ const CheckoutService = () => {
     }, [services, serviceId])
 
     let errorElement;
-    //-----------------------
+    //--------- get data from user
     const [user, setUser] = useAuthState(auth);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -24,7 +24,7 @@ const CheckoutService = () => {
 
     const [error, setError] = useState('');
 
-    //-2--------------------
+    //-2--------- All handles
     const handleNameBlur = event => {
         setName(event.target.value);
     }
@@ -34,7 +34,7 @@ const CheckoutService = () => {
     const handlePhoneBlur = event => {
         setPhone(event.target.value);
     }
-    //-------
+    //------- submit part
     if (error) {
         errorElement = <p className=' text-danger'>Error: {error?.message} </p>
     }
@@ -48,7 +48,6 @@ const CheckoutService = () => {
     const navigateLogin = event => {
         navigate('/')
     }
-
 
     return (
         <div className='container my-5'>
@@ -104,6 +103,7 @@ const CheckoutService = () => {
                         </div>
                     </div>
                 </div>
+                {/* Details of Service  */}
                 <div className="row">
                     <div className="col">
                         <Accordion>

@@ -7,7 +7,7 @@ const Blogs = () => {
         <div className='container'>
             <div className="row">
                 <div className="col-md-7 mx-auto">
-                    {/* -----------------  */}
+                    {/* ------- Question 1 ----------  */}
                     <h4 className='pt-5 pb-3'> <span className='text-info'> Question 1:</span> <span className='fw-normal '>Difference between <code>authorization</code> and <code>authentication</code> </span> ?</h4>
                     <h5 className=' text-success'>Answer:</h5>
                     <Table striped bordered hover>
@@ -51,7 +51,7 @@ const Blogs = () => {
                     </Table>
 
                     <br /> <hr />
-                    {/* ---------------------------  */}
+                    {/* -------------- Question 2 -------------  */}
                     <h4 className='pt-5 pb-3'> <span className='text-info'> Question 2:</span> <span className='fw-normal '> Why are you using <code>firebase?</code> What other options do you have to <code>implement authentication?</code></span> </h4>
                     <h5 className=' text-success'>Answer:</h5>
                     <p>Firebase is able to manage databases in real-time or instantly. Easy to exchange or easily with data migration using firebase, easy process to Authentication or Authorization. it's developer-friendly by google. and Firebase Storage is basically a powerful and simple object storage, in which you can store your files easily.</p>
@@ -70,7 +70,7 @@ const Blogs = () => {
                     </p>
 
                     <br /> <hr />
-                    {/* --------------------------------  */}
+                    {/* ----------------- Question 3 ---------------  */}
                     <h4 className='pt-5 pb-3'> <span className='text-info'> Question 3:</span> <span className='fw-normal '> What other services does <code>firebase</code> provide other than <code>authentication?</code></span> </h4>
                     <h5 className=' text-success'>Answer:</h5>
                     <p><b className=' text-secondary'>There are  Firebase Services List other than Authentication:</b></p>
