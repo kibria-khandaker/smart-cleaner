@@ -8,13 +8,13 @@ const Blogs = () => {
             <div className="row">
                 <div className="col-md-7 mx-auto">
                     {/* -----------------  */}
-                    <h4 className='pt-5 pb-3'> <span className='text-warning'> Question 1:</span> <span className='fw-normal '>Difference between <code>authorization</code> and <code>authentication</code> </span> ?</h4>
+                    <h4 className='pt-5 pb-3'> <span className='text-info'> Question 1:</span> <span className='fw-normal '>Difference between <code>authorization</code> and <code>authentication</code> </span> ?</h4>
                     <h5 className=' text-success'>Answer:</h5>
                     <Table striped bordered hover>
                         <thead>
                             <tr className='text-center'>
-                                <th> Authorization </th>
-                                <th> Authentication </th>
+                                <th className=' text-secondary'> Authorization </th>
+                                <th className=' text-secondary'> Authentication </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -52,10 +52,10 @@ const Blogs = () => {
 
                     <br /> <hr />
                     {/* ---------------------------  */}
-                    <h4 className='pt-5 pb-3'> <span className='text-warning'> Question 2:</span> <span className='fw-normal '> Why are you using <code>firebase?</code> What other options do you have to <code>implement authentication?</code></span> </h4>
+                    <h4 className='pt-5 pb-3'> <span className='text-info'> Question 2:</span> <span className='fw-normal '> Why are you using <code>firebase?</code> What other options do you have to <code>implement authentication?</code></span> </h4>
                     <h5 className=' text-success'>Answer:</h5>
                     <p>Firebase is able to manage databases in real-time or instantly. Easy to exchange or easily with data migration using firebase, easy process to Authentication or Authorization. it's developer-friendly by google. and Firebase Storage is basically a powerful and simple object storage, in which you can store your files easily.</p>
-                    <p> <b>Here Some Name of Providers for  implement authentication: </b>  <br />
+                    <p> <b className=' text-secondary'>Here Some Name of Providers for  implement authentication: </b>  <br />
                         STYTCH ,
                         Ory ,
                         Supabase,
@@ -71,16 +71,16 @@ const Blogs = () => {
 
                     <br /> <hr />
                     {/* --------------------------------  */}
-                    <h4 className='pt-5 pb-3'> <span className='text-warning'> Question 3:</span> <span className='fw-normal '> What other services does <code>firebase</code> provide other than <code>authentication?</code></span> </h4>
+                    <h4 className='pt-5 pb-3'> <span className='text-info'> Question 3:</span> <span className='fw-normal '> What other services does <code>firebase</code> provide other than <code>authentication?</code></span> </h4>
                     <h5 className=' text-success'>Answer:</h5>
-                    <p><b>There are  Firebase Services List other than Authentication:</b></p>
-                    
+                    <p><b className=' text-secondary'>There are  Firebase Services List other than Authentication:</b></p>
+
                     <p>
                         Cloud Firestore, +
                         Machine Learning, +
-                        Cloud Functions,   +                     
+                        Cloud Functions,   +
                         Hosting,+
-                        Cloud Storage,+ 
+                        Cloud Storage,+
                         Realtime Database,+
                         Crashlytics,+
                         Performance Monitoring,+
@@ -92,7 +92,7 @@ const Blogs = () => {
                         Cloud Messaging,+
                         Remote Config,+
                         Dynamic Links,
-                    </p> 
+                    </p>
                     <img className='w-100' src={fireBaseServicesImg} alt="FirebaseServices" />
                     <br /><br /><br /><br />
 

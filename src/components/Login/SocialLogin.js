@@ -32,16 +32,16 @@ const SocialLogin = () => {
                 <div className=' bg-primary w-50 ' style={{ height: '1px' }}></div>
             </div>
             {errorElement}
-            <dir className='w-100 p-0'>
-                <button onClick={() => signInWithGoogle()} className='btn btn-primary my-2 w-50 mx-auto d-block'>
+            <div className='w-100 p-0 mb-5 pb-4'>
+                <button onClick={() => signInWithGoogle()} className='btn btn-info my-2 w-50 mx-auto d-block'>
                     <img style={{ width: '32px' }} src={googleImg} alt="" />
                     <span className='px-2'>Google Sign In</span>
                 </button>
-                <button onClick={() => signInWithGithub()} className='btn btn-primary my-2 w-50 mx-auto d-block'>
+                <button onClick={() => signInWithGithub()} className='btn btn-info my-2 w-50 mx-auto d-block'>
                     <img style={{ width: '32px' }} src={githubImg} alt="" />
                     <span className='px-2'>Github Sign In</span>
                 </button>
-            </dir>
+            </div>
         </div>
     );
 };

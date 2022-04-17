@@ -95,7 +95,7 @@ const Login = () => {
                             <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                         </Form.Group>
 
-                        <Button variant="primary" type="submit">
+                        <Button variant="info text-white px-5" type="submit">
                             Login
                         </Button>
 

@@ -81,13 +81,13 @@ const SignUp = () => {
                             </FormLabel>
                         </Form.Group>
 
-                        <Button disabled={error ? (agree) : (!agree)} variant="info" className=' text-white' type="submit">
+                        <Button disabled={error ? (agree) : (!agree)} variant="info" className=' text-white px-5' type="submit">
                             Sign Up
                         </Button>
 
                     </Form>
                     <div className=''>
-                        <p className='m-0 mt-1'> Already Have an account? <Link onClick={navigateLogin} to='/login' className=' text-info text-decoration-none'> Please Login </Link>  </p>
+                        <p className='m-0 mt-4'> Already Have an account? <Link onClick={navigateLogin} to='/login' className=' text-primary text-decoration-none'> Please Login </Link>  </p>
                     </div>
                 </div>
             </div>
