@@ -7,3 +7,9 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.banner_text_section h1{
+    color: #081f4c;
+}
+.banner_text_section p{
+    text-shadow: 0px 0px 20px #081f4c;
+}

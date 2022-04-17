@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-
+ 
 const useServices = () => {
-    const [service, setServices] = useState([]);
+    const [services, setServices] = useState([]);
 
     useEffect(()=>{
         fetch('https://raw.githubusercontent.com/kibria-khandaker/API-Service-items-blog/master/servicesData.Json')
@@ -9,7 +9,7 @@ const useServices = () => {
         .then(data=>setServices(data))
     },[])
 
-    return [service, setServices];
+    return [services, setServices];
 }
 
 export default useServices;

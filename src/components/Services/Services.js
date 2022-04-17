@@ -1,56 +1,35 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import myImage from './../../img/pages-bg.jpg'
+import useServices from '../../hooks/useServices';
+import SingleServiceComponent from './SingleServiceComponent';
+
 
 const Services = () => {
+
+    const [services, setServices] = useServices()
+    
     let navigate = useNavigate();
-    const handleCheckout =()=>{
-        navigate(`/checkout/sssssss`);
+
+    const handleCheckout = (id) => {
+        navigate(`/checkout/${id}`);
     }
+
     return (
-        <div className='container'>
-            <div className="row">
-                <div className="col-md-12">
-                    <h2> Services </h2>
+        <div className='container py-5'>
+            <div className="row pt-5">
+                <div className="col-md-12 pb-4">
+                    <h2 className='text-center text-uppercase my-4 text-info'> Services </h2>
+                    <p className=' w-75 mx-auto text-center'> Cleaning eliminates germs along with dirt and dust, resulting in better indoor air quality, leaving a whiff of freshness in its wake. The kitchen and bathroom usually require special attention, as they are known to be one of the germiest places in any house. </p>
                 </div>
             </div>
-            <div className="row row-cols-1 row-cols-md-3 g-4">
-                <div className="col">
-                    <div className="card h-100">
-                        <img src={myImage} className="card-img-top" alt="myImage" />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                        <button onClick={handleCheckout} className="card-footer border-0">
-                            <small className="text-info fw-bold text-uppercase"> Checkout Service </small>
-                        </button>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card h-100">
-                        <img src={myImage} className="card-img-top" alt="myImage" />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                        </div>
-                        <button onClick={handleCheckout}  className="card-footer border-0">
-                            <small className="text-info fw-bold text-uppercase"> Checkout Service </small>
-                        </button>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card h-100">
-                        <img src={myImage} className="card-img-top" alt="myImage" />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                        </div>
-                        <button onClick={handleCheckout}  className="card-footer border-0">
-                            <small className="text-info fw-bold text-uppercase"> Checkout Service </small>
-                        </button>
-                    </div>
-                </div>
+            <div className="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                {
+                    services.map(service => <SingleServiceComponent
+                        key={service.id}
+                        service={service}
+                        handleCheckout={handleCheckout}
+                    ></SingleServiceComponent>)
+                }
             </div>
         </div>
     );
