@@ -8,7 +8,7 @@ const SingleCustomerReviews = ({ customerReview }) => {
         <div className="col">
             <div className=" d-flex align-items-start ">
                 <div className="col-md-2">
-                    <img src={img} className="img-fluid rounded-circle mt-1" alt="..." />
+                    <img src={img} className="img-fluid rounded-circle mt-1" alt="CustomerReviews" />
                 </div>
                 <div className="col-md-10">
                     <div className="px-3">

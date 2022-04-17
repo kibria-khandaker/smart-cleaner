@@ -93,7 +93,7 @@ const Blogs = () => {
                         Remote Config,+
                         Dynamic Links,
                     </p> 
-                    <img className='w-100' src={fireBaseServicesImg} alt="" />
+                    <img className='w-100' src={fireBaseServicesImg} alt="FirebaseServices" />
                     <br /><br /><br /><br />
 
                 </div>

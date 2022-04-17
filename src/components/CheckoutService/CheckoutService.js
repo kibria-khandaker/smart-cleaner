@@ -100,7 +100,7 @@ const CheckoutService = () => {
                                 <p> <b>{singleItems?.name}</b> : is the name of Selected Service </p>
                                 <p> $<b>{singleItems?.price}</b>/day : Price of Selected Service </p>
                             </div>
-                            <img className='w-50  float-lg-end' src={singleItems?.img1} alt="" />
+                            <img className='w-50  float-lg-end' src={singleItems?.img1} alt="serviceImage" />
                         </div>
                     </div>
                 </div>
@@ -117,9 +117,9 @@ const CheckoutService = () => {
                                 </Accordion.Header>
                                 <Accordion.Body>
                                     <p> {singleItems?.shortText} </p>
-                                    <img className='w-100 p-4' src={singleItems?.img2} alt="" />
+                                    <img className='w-100 p-4' src={singleItems?.img2} alt="serviceImage" />
                                     <p> {singleItems?.description1} </p>
-                                    <img className='w-100 p-4' src={singleItems?.img3} alt="" />
+                                    <img className='w-100 p-4' src={singleItems?.img3} alt="serviceImage" />
                                     <p> {singleItems?.description2} </p>
                                 </Accordion.Body>
                             </Accordion.Item>
