@@ -7,7 +7,7 @@ const CustomerReviews = () => {
     const [customerReviews, setCustomerReviews] = useReviews();
 
     return (
-        <div className='container-fluid bg-light mt-5 py-5'>
+        <div className='container-fluid bg-light mt-5 py-5' id='customerReviews' >
             <div className='container'>
                 <div className="row">
                     <div className="col-md-12 pt-4 ">

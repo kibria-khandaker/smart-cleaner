@@ -5,7 +5,7 @@ const SingleServiceComponent = ({ service, handleCheckout }) => {
     
     return (
         <div className="col">
-            <div className="card h-100 ">
+            <div className="card ">
                 <img src={img1} className="card-img-top" alt="myImage" />
                 <div className="card-body text-center">
                     <h5 className="card-title text-uppercase text-info my-4">{name}</h5>
