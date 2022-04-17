@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Accordion, Button, Form } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { auth } from './../../firebase.init';
@@ -104,16 +104,26 @@ const CheckoutService = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row ">
-                    <hr className='my-5 py-1 bg-info' />
-                    <div className='col-md-8 mx-auto'>
-
-                        <h3 className='pb-3'> Read more about <span className='text-info'>Your Selected</span> service   </h3>
-                        <p> {singleItems?.shortText} </p>
-                        <img className='w-100 p-4' src={singleItems?.img2} alt="" />
-                        <p> {singleItems?.description1} </p>
-                        <img className='w-100 p-4' src={singleItems?.img3} alt="" />
-                        <p> {singleItems?.description2} </p>
+                <div className="row">
+                    <div className="col">
+                        <Accordion>
+                            <Accordion.Item eventKey="0">
+                                <Accordion.Header>
+                                    <h4 className='text-black'>
+                                        Read Details about
+                                        <span className='text-info'> {singleItems?.name} </span>
+                                        service
+                                    </h4>
+                                </Accordion.Header>
+                                <Accordion.Body>
+                                    <p> {singleItems?.shortText} </p>
+                                    <img className='w-100 p-4' src={singleItems?.img2} alt="" />
+                                    <p> {singleItems?.description1} </p>
+                                    <img className='w-100 p-4' src={singleItems?.img3} alt="" />
+                                    <p> {singleItems?.description2} </p>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        </Accordion>
                     </div>
                 </div>
             </div>

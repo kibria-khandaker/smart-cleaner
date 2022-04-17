@@ -23,7 +23,7 @@ const CustomerReviews = () => {
                         customerReviews.map(customerReview => <SingleCustomerReviews
                             key={customerReview.id}
                             customerReview={customerReview}
-                        ></SingleCustomerReviews>).slice(0, 3)
+                        ></SingleCustomerReviews>).slice(11, 14)
                     }
                 </div>
                 <div className="row">
