@@ -47,7 +47,6 @@ const Login = () => {
         const password = passwordRef.current.value;
 
         signInWithEmailAndPassword(email, password)
-
     }
 
     const navigateRegister = event => {
@@ -57,9 +56,25 @@ const Login = () => {
         const email = emailRef.current.value;
         if (email) {
             await sendPasswordResetEmail(email);
-            toast('Check your Email');
+            toast.success(` 👌 Check your Email ${email}`, {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
         } else {
-            toast('Enter Your email');
+            toast.warn('Enter only your email in the Email Filed 🦄', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
         }
     }
 
@@ -90,8 +105,7 @@ const Login = () => {
                         {errorElement}
                         <p className='m-0 mt-4'> Forget Password? <button onClick={resetPassword} className=' border-0 rounded text-primary text-decoration-none'> Reset Password </button>  </p>
                         <p className='m-0 mt-1'> Are you new in Smart Cleaner? <Link onClick={navigateRegister} to='/signup' className=' text-primary text-decoration-none'> Please SignUp </Link>  </p>
-                    </div>.
-
+                    </div>
                     <ToastContainer />
                 </div>
             </div>
