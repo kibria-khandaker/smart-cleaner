@@ -81,7 +81,7 @@ const CheckoutService = () => {
                 </div>
                 <div className="row">
                     <div className='col-lg-6'>
-                        <h5 className='text-center pt-5'> Input Your Shipping information </h5>
+                        <h5 className='text-center pt-5'> Input Your Booking information </h5>
                         <div className="p-5">
                             {errorElement}
                             <Form onSubmit={handleCreateUser}>
@@ -99,7 +99,7 @@ const CheckoutService = () => {
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                                    <Form.Control onBlur={handlePhoneBlur} type="number" name="phone" placeholder='Type your Phone Number' required />
+                                    <Form.Control onBlur={handlePhoneBlur} type="number" name="phone" placeholder='Add Phone Number' required />
                                 </Form.Group>
 
                                 <Button variant="info" className=' w-100 text-white' type="submit">

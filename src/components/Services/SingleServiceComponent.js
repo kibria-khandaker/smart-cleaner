@@ -16,7 +16,7 @@ const SingleServiceComponent = ({ service, handleCheckout }) => {
                     <p className="">Service Price <b>${price}</b>/day</p>
                 </div>
                 <button onClick={()=>handleCheckout(id)} className="hover_btn card-footer  bg-info border-0 py-3">
-                    <small className=" text-white text-uppercase"> Checkout Service </small><span className='hover_sop_cart'><HiShoppingCart></HiShoppingCart></span>
+                    <small className=" text-white text-uppercase"> Click for Get Service </small><span className='hover_sop_cart'><HiShoppingCart></HiShoppingCart></span>
                 </button>
             </div>
         </div>
