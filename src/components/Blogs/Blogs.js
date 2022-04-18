@@ -13,7 +13,6 @@ const Blogs = () => {
                     <h4 className='my-5 fw-normal'> There are 3 questions click on the <span className=' text-info'>arrow</span> for every answer </h4>
 
                     <Accordion>
-
                         <Accordion.Item eventKey="0">
                             <Accordion.Header>
                                 <h6> <span className='text-info'> Question 1:</span> <span className='fw-normal '>  Difference between <code> authorization </code>  and <code> authentication</code>? </span> </h6>
@@ -40,7 +39,6 @@ const Blogs = () => {
                                 <BlogAnswer3></BlogAnswer3>
                             </Accordion.Body>
                         </Accordion.Item>
-
                     </Accordion>
 
                 </div>

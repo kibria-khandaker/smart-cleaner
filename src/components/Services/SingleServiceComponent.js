@@ -8,7 +8,7 @@ const SingleServiceComponent = ({ service, handleCheckout }) => {
     return (
         <div className="col">
             <div className="card hover_card">
-                <img src={img1} className="hover_img card-img-top" alt="serviceImage" />
+                <img src={img1} className="card-img-top" alt="serviceImage" />
                 <div className="hover_text card-body text-center">
                     <h5 className="card-title text-uppercase text-info my-4">{name}</h5>
                     <p className="card-text"> {shortText} </p>

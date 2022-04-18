@@ -7,9 +7,6 @@
     -webkit-transform: scale(1.1); /* Safari 3-8 */
     transform: scale(1.1); 
 }
-.hover_btn {
-}
-
 .hover_sop_cart {
   color: #fff;
   transition: all .2s ease-in-out;
