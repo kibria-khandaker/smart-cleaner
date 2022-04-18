@@ -43,7 +43,7 @@ const SignUp = () => {
         if (agree) {
             await createUserWithEmailAndPassword(email, password);
             await updateProfile({ displayName: name });
-            navigate('/home');
+            // navigate('/home');
 
             // if (user == false) {
             //     return (alert('your email already used')+ navigate('/home') )
