@@ -1,17 +1,16 @@
 # Smart Cleaner
 
-<br /><br />
+<br />
 
 ### My project Live link, And click [Here](https://a-smart-cleaner.web.app/) to view it in your browser.
 
-
+<br/> 
 
 #### Firebase Hosting is showing two default links, So i provided Both links:
 ##### Or, Copy/Click the link [https://a-smart-cleaner.web.app/](https://a-smart-cleaner.web.app/)
 ##### Or, Copy/Click the link [https://a-smart-cleaner.firebaseapp.com/](https://a-smart-cleaner.firebaseapp.com/)
 
-<br />
-<br /><br />
+<br /><br /><br />
 
 > #### Some notes about My ( Smart Cleaner ) React Project
 

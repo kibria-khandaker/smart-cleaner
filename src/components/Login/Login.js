@@ -111,7 +111,7 @@ const Login = () => {
                 </div>
             </div>
             <div className="row">
-                <div className="col-md-6 mx-auto pb-4">
+                <div className="col-md-6 mx-auto py-4">
                     <SocialLogin></SocialLogin>
                 </div>
             </div>

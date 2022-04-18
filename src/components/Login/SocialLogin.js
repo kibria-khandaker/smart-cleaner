@@ -19,7 +19,7 @@ const SocialLogin = () => {
     if (loading || loadingGithub) {
         return <Loading></Loading>
     }
-    
+
     if (error) {
         errorElement = <p className=' text-danger'>Error: {error?.message} </p>
     }
@@ -35,7 +35,13 @@ const SocialLogin = () => {
                 <p className='mt-2 px-2'>or</p>
                 <div className=' bg-primary w-50 ' style={{ height: '1px' }}></div>
             </div>
+            <p className=' text-info'>
+                <small>
+                    Do not use the same email for a new account, avoid same email if used in your social account.
+                </small>
+            </p>
             {errorElement}
+
             <div className='w-100 p-0 mb-5 pb-4'>
                 <button onClick={() => signInWithGoogle()} className='btn btn-info my-2 w-50 mx-auto d-block'>
                     <img style={{ width: '32px' }} src={googleImg} alt="" />
