@@ -13,7 +13,7 @@ const Banner = () => {
                             A clean environment helps to make a fresh mind and able to gift a healthy life.
                         </p>
                         {/* Customer Reviews id is #reviews  */}                        
-                        <a  className='text-white bg-info text-decoration-none py-3 px-4 rounded-3'  as={Link} href="#reviews"> Check Customer Reviews  </a>
+                        <a  className='go_review_btn text-decoration-none py-3 px-4 rounded-3'  as={Link} href="#reviews"> Check Customer Reviews  </a>
 
                     </div>
                 </div>

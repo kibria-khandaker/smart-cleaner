@@ -6,8 +6,8 @@ const Footer = () => {
     const year = today.getFullYear();
     return (
         <footer className='text-center bg-info py-4'>
-            <p className='m-0'> <small>Copyright @ {year} </small>-Smart Cleaner </p>
             <Link className=' text-decoration-none' to={'/privacypolicy'}> Our Privacy policy </Link>
+            <p className='m-0 text-white '> <small>Copyright @ {year} </small>-Smart Cleaner </p>
         </footer>
     );
 };
