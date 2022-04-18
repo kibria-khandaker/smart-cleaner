@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { auth } from './../../firebase.init';
 import useServices from './../../hooks/useServices';
+import { toast, ToastContainer } from 'react-toastify';
 
 const CheckoutService = () => {
     const [services, setServices] = useServices();
@@ -41,6 +42,29 @@ const CheckoutService = () => {
     const handleCreateUser = event => {
         event.preventDefault();
         const shipping = { name, email, address, phone }
+        if (shipping) {
+            toast.success(` 👌 Thank you for the Booking `, {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+        } else {
+            toast.warn('Enter your information 🦄', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+        }
+        
+        
         console.log(shipping);
     }
 
@@ -81,7 +105,7 @@ const CheckoutService = () => {
                                 <Button variant="info" className=' w-100 text-white' type="submit">
                                     Submit
                                 </Button>
-
+                                <ToastContainer />
                             </Form>
                             <p style={{ color: 'red' }}> {error} </p>
 
@@ -105,13 +129,13 @@ const CheckoutService = () => {
                 </div>
                 {/* Details of Service  */}
                 <div className="row">
-                    <div className="col">
+                    <div className="col-lg-8 mx-auto">
                         <Accordion>
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>
-                                    <h4 className='text-black'>
-                                        Read Details about
-                                        <span className='text-info'> {singleItems?.name} </span>
+                                    <h4 className='text-black fw-light'>
+                                        Please read details about
+                                        <span className='text-info  fw-bold'> {singleItems?.name} </span>
                                         service
                                     </h4>
                                 </Accordion.Header>

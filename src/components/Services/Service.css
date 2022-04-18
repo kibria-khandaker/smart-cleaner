@@ -1,0 +1,20 @@
+.hover_text h5{
+    transition: all .2s ease-in-out;
+}
+.hover_card:hover h5{
+    transform: scale(2.1);
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+.hover_btn {
+}
+
+.hover_sop_cart {
+  color: #fff;
+  transition: all .2s ease-in-out;
+}
+.hover_btn:hover .hover_sop_cart {
+  color: rgb(0, 0, 0);
+  padding-left: 6px;
+}

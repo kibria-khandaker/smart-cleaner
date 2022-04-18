@@ -10,7 +10,7 @@
 
 > #### Some notes about My ( Smart Cleaner ) React Project
 
-- i'm familiar with `React`, `firebase`, `react router` And the site made with all of your requirements.
+- i'm familiar with `React`, `firebase`, `react router` And the site is made with all of your requirements.
 - For the Firebase Auth's i used `React Firebase Hooks`
 - Manege for the `fetch data` used `Custom Hook`
 - For `navigation` and `react router` i used `react-router-dom v6`

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { auth } from '../../firebase.init';
 import githubImg from '../../img/github.png';
 import googleImg from '../../img/google.svg';
@@ -11,17 +11,21 @@ const SocialLogin = () => {
     const [signInWithGithub, userGithub, loadingGithub, errorGithub] = useSignInWithGithub(auth);
 
     const navigate = useNavigate();
+    let location = useLocation();
+
+    let from = location.state?.from?.pathname || "/";
 
     let errorElement;
     if (loading || loadingGithub) {
         return <Loading></Loading>
     }
-    if (error || errorGithub) {
-        errorElement = <p className=' text-danger'>Error: {error?.message}  {errorGithub?.message}</p>
+    
+    if (error) {
+        errorElement = <p className=' text-danger'>Error: {error?.message} </p>
     }
 
-    if (user || userGithub) {
-        navigate('/home')
+    if (user) {
+        navigate(from, { replace: true });
     }
 
     return (
