@@ -7,7 +7,6 @@ import { auth } from '../../firebase.init';
 import logo from '../../Smart-Cleaner.png';
 import CustomLink from '../CustomLink/CustomLink';
 
-
 const Header = () => {
     const [user] = useAuthState(auth);
     const handleSignOut = () => {
@@ -15,12 +14,13 @@ const Header = () => {
     }
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" sticky='top' bg="light" variant="info">
+            <Navbar collapseOnSelect expand="lg" sticky='top' bg="light" variant="light">
                 <Container>
                     <Navbar.Brand as={Link} to="/">
                         <img height={40} src={logo} alt="Logo" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <p className='m-0 '>I'm a expert &amp; smart cleaner.</p>

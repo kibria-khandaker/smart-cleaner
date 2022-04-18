@@ -20,11 +20,11 @@ const SocialLogin = () => {
         return <Loading></Loading>
     }
 
-    if (error) {
+    if (error || errorGithub) {
         errorElement = <p className=' text-danger'>Error: {error?.message} </p>
     }
 
-    if (user) {
+    if (user || userGithub) {
         navigate(from, { replace: true });
     }
 
