@@ -14,7 +14,14 @@
 
 <br /><br />
 
-> #### Some notes about My ( Smart Cleaner ) React Project
+#### Some notes about My ( Smart Cleaner ) React Project
+Details: Independent Service Provider, Add Service, User  Authentication,
+Technology: React.js, react-bootstrap, Firebase-Authentication , dotenv, CORS, JWT, react-firebase-hooks, react-router-dom,
+
+<br /><br />
+
+
+> #### Here Some Package use for the project:
 
 - i'm familiar with `React`, `firebase`, `react router` And the site is made with all of your requirements.
 - For the Firebase Auth's i used `React Firebase Hooks`
