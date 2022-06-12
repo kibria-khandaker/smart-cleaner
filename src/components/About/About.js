@@ -7,24 +7,28 @@ const About = () => {
             <div className="row mb-5">
                 <div className="col-md-10 mx-auto">
                     <div className="row d-flex align-items-center">
-                        <div className='col-md-5 mt-5'>
+                        <div className='col-md-5 mt-4'>
                             {/* this image from google Drive  */}
                             <img className='w-100 mx-auto text-center' src={golamKibria} alt="golamKibria" />
                         </div>
-                        <div className='col-md-7 mt-5 d-flex  flex-column align-items-center'>
+                        <div className='col-md-7 mt-6 d-flex  flex-column align-items-center'>
                             <h3 className='pb-3'> About Me </h3>
                             <p>
                                 My name is <span className=' text-info'>Golam kibria</span>,
-                                I want to be a full stack developer and I want to build my career in the developing sector.
+                                a Front-End Developer | MERN Stack Developer based in javaScript, React, Node.js, Express.js, MongoDB
                             </p>
                             <p>
-                                if i got any opportunity to build my career with this, i will take it without any confusion. because i love it and it's my target and I will achieve at any cost.
+                                I am a hard-working web developer having an urge for creating elegant solutions within the least possible time. I am able to work in both self-starting and collaborative environments being focused on achieving proven results under strict deadlines. I am passionate to take a challenging position at a prestigious company that will expand my learning and building skills.
                             </p>
                             <p>
-                                want to learn a all top programming languages like JavaScript python, I also want to learn Web, Android, IOS and all types of application development.
-                            </p>
-                            <p>
-                                i like develop and for learning for this, I am also trying and even I am trying so hard every time, I am doing practice from online internet on others resource, if I got any resource which helps me I try with this
+                                My Skills:
+                                <ul class="list-group">
+                                    <li class="list-group-item"> Frontend: React-js, JavaScript(ES-6), TailwindCSS, Bootstrap, milligram, CSS3, </li>
+                                    <li class="list-group-item"> Backend: node Js, express Js, firebase-authentication , JWT, REST API, </li>
+                                    <li class="list-group-item"> Tools: Git, github, Heroku , Netlify, npm, yarn, photoshop CS6, firebase, illustrator , sketch, figma </li>
+                                    <li class="list-group-item"> Familiar : Typescript , React Native, Next JS, SASS </li>
+                                    <li class="list-group-item"> CMS: WordPress (development, customization and theme-builders) </li>
+                                </ul>
                             </p>
                         </div>
                     </div>
