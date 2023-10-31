@@ -9,6 +9,7 @@ const Banner = () => {
                 <div className="row">
                     <div className="col-md-10 mx-auto  text-center banner_text_section">
                         <h1 className=' text-uppercase fw-bolder'> Smart Cleaner </h1>
+                        <p>  </p>
                         <p className='mb-5 pb-2 fs-4 fw-light text-white'>
                             A clean environment helps to make a fresh mind and able to gift a healthy life.
                         </p>

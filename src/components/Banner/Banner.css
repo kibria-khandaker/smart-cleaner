@@ -15,10 +15,10 @@
 }
 .go_review_btn {
     transition: all .2s ease-in-out;
-  background-color: #0dcaf0;
+  background-color:#0d2249;
   color: #ffffff;
 }
 .go_review_btn:hover {
-  background-color: #0d2249;
+  background-color:  #0dcaf0;
   color: #ffffff;
 }

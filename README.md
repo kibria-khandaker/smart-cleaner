@@ -31,3 +31,15 @@ Technology: React.js, react-bootstrap, Firebase-Authentication , dotenv, CORS, J
 - i used `react-bootstrap` for CSS responsive frameworks,
 - i used `react-rating` for Showing Star of CUSTOMER REVIEWS,
 - And all image from (Google or other web link Resources) for the Services/Blog And in others pages
+
+
+
+```bash
+
+npm start
+
+npm run build
+
+firebase deploy
+
+```
